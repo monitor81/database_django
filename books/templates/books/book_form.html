@@ -1,0 +1,29 @@
+<!-- books/templates/books/book_form.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить книгу</title>
+</head>
+<body>
+    <h1>Добавить книгу</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="author">ФИО автора:</label><br>
+        <input type="text" id="author" name="author" required><br><br>
+
+        <label for="title">Название произведения:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="pages">Количество страниц:</label><br>
+        <input type="number" id="pages" name="pages" required><br><br>
+
+        <label for="publication_year">Год издания:</label><br>
+        <input type="number" id="publication_year" name="publication_year" required><br><br>
+
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>
